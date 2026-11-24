@@ -1,3 +1,7 @@
+### Requirements
+
+See [SRS document](https://docs.google.com/document/d/1Luq4SzilKKOuf-xOaeI8qnIUYTr-38Tx_36KlQczMdc/edit?usp=sharing)
+
 ### Architecture tree
 ```
 Panteleimon
