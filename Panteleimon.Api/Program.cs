@@ -1,10 +1,27 @@
+using Panteleimon.Api.Http;
+using Panteleimon.Application.Owners;
+using Panteleimon.Persistence.SqlServer;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+builder.Services
+    .AddControllers()
+    .ConfigureApiBehaviorOptions(o =>
+        o.InvalidModelStateResponseFactory = ctx =>
+            ApiProblemFactory.FromModelState(ctx.ModelState));
+
+//builder.Services.AddPostgresPersistence(
+//    builder.Configuration.GetConnectionString("DefaultConnection")!);
+
+builder.Services.AddSqlServerPersistence(
+    builder.Configuration.GetConnectionString("DefaultConnection")!);
+
+builder.Services.AddScoped<OwnerService>();
 
 var app = builder.Build();
 

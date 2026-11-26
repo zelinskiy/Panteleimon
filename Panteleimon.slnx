@@ -1,11 +1,12 @@
 <Solution>
   <Folder Name="/src/">
+    <Project Path="Panteleimon.Api/Panteleimon.Api.csproj" />
     <Project Path="Panteleimon.Application/Panteleimon.Application.csproj" />
+    <Project Path="Panteleimon.Contracts/Panteleimon.Contracts.csproj" Id="dd93dd81-dfbf-453b-b0cf-ad395a172cf7" />
     <Project Path="Panteleimon.Domain/Panteleimon.Domain.csproj" />
     <Project Path="Panteleimon.Infrastructure/Panteleimon.Infrastructure.csproj" />
     <Project Path="Panteleimon.VehicleControl/Panteleimon.VehicleControl.csproj" />
     <Project Path="Panteleimon.Web/Panteleimon.Web.csproj" />
-    <Project Path="Panteleimon.Api/Panteleimon.Api.csproj" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="Panteleimon.AcceptanceTests/Panteleimon.AcceptanceTests.csproj" />

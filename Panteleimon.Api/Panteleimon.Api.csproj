@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
+    <TargetFramework>net11.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>ad9b9c40-ce03-4866-bd4b-d8ae8461c935</UserSecretsId>
@@ -11,6 +11,12 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.15" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.24.2-preview.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Panteleimon.Application\Panteleimon.Application.csproj" />
+    <ProjectReference Include="..\Panteleimon.Contracts\Panteleimon.Contracts.csproj" />
+    <ProjectReference Include="..\Panteleimon.Domain\Panteleimon.Domain.csproj" />
   </ItemGroup>
 
 </Project>
